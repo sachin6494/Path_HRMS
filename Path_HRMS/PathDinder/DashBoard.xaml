@@ -1,0 +1,70 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+
+        xmlns:local="clr-namespace:PathDinder"
+        xmlns:UserControls="clr-namespace:PathDinder.UserControls" x:Class="PathDinder.DashBoard"
+        mc:Ignorable="d"
+        Title="DashBoard" Height="720" Width="1080">
+    <Grid Background="LightGray">
+
+
+        <Grid Height="60" VerticalAlignment="Top" Background="#FF1878D8">
+            <TextBlock Text="Path HRMS" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" />
+            <TextBlock Text="Sachin Sharma" HorizontalAlignment="Right" FontSize="18" Margin="0,16,74,20" d:LayoutOverrides="Height" />
+
+            <StackPanel VerticalAlignment="Center">
+                <materialDesign:PopupBox HorizontalAlignment="Right" Margin="10" PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" >
+                    <StackPanel Width="150">
+                        <Button Content="Settings"/>
+                        <Button Content="Help"/>
+                        <Separator/>
+                        <Button x:Name="ButtonPopUpLogout" Content="Logout" Click="ButtonPopUpLogout_Click"/>
+                    </StackPanel>
+
+                </materialDesign:PopupBox>
+
+            </StackPanel>
+        </Grid>
+        <Grid x:Name="GridMenu" Width="150" HorizontalAlignment="Left" Background="DarkBlue">
+            <StackPanel>
+                <Grid Height="100"   Background="DarkBlue" HorizontalAlignment="Left" />
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 10">
+                    <Button x:Name="btnHome" Content="Home" VerticalAlignment="Center" HorizontalAlignment="Center" Width="120" Click="BtnHome_Click" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 10">
+                    <Button x:Name="btn_Employee" Content="Employee" VerticalAlignment="Center" Width="120" Click="Btn_Employee_Click"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 10">
+                    <Button x:Name="btn_Company" Content="Company" VerticalAlignment="Center" Width="120" Click="Btn_Company_Click"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 10">
+                    <Button x:Name="btn_Department" Content="Department" VerticalAlignment="Center" Width="120" Click="Btn_Department_Click"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 10">
+                    <Button x:Name="btn_Designation" Content="Designation" VerticalAlignment="Center" Width="120" Click="Btn_Designation_Click"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 10">
+                    <Button x:Name="btn_Report" Content="Report" VerticalAlignment="Center" Width="120" Click="Btn_Report_Click"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+        <!--<Grid Background="Red" Margin="150,60,0,0">
+        </Grid>-->
+        <StackPanel x:Name="main" Background="Red" Margin="150,60,0,0">
+            
+        </StackPanel>
+            
+            
+        <!--<UserControls:Home Margin="150,70,10,10"/>
+        <UserControls:InsertEmployee Margin="150,60,0,0"/>
+        <UserControls:CompanyMaster Margin="150,60,0,0"/>
+        <UserControls:DepartmentMaster Margin="150,60,0,0"/>
+        <UserControls:DesignationMaster Margin="150,60,0,0"/>-->
+    </Grid>
+
+
+</Window>

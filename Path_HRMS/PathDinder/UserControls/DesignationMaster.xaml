@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="PathDinder.UserControls.DesignationMaster"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PathDinder.UserControls"
+             mc:Ignorable="d" 
+              d:DesignHeight="660" d:DesignWidth="910">
+    <Grid Background="Blue">
+        <Grid Background="Green" Margin="20,20,20,320">
+
+            <Label Margin="300,80,455,0" Background="Red" Content="Designation ID:" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="115"/>
+            <TextBox x:Name="txtDesignationId" Margin="420,80,300,0" Background="White" Height="30" VerticalAlignment="Top"/>
+
+            <Label Margin="300,120,455,0" Background="Red" Content="Designation Name:" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="115"/>
+            <TextBox x:Name="txtDesignationName"  Margin="420,120,300,0" Background="White" Height="30" VerticalAlignment="Top"/>
+            <Button x:Name="btnDesigCreate" Content="Create" VerticalAlignment="Bottom" Margin="326,200,444,80" HorizontalAlignment="Left" Click="BtnDesigCreate_Click" Width="100"/>
+            <Button x:Name="btnDesigDelete" Content="Delete" VerticalAlignment="Bottom" Margin="444,200,326,80" HorizontalAlignment="Right" Click="BtnDesigDelete_Click" Width="100"/>
+
+        </Grid>
+        <!--<Separator></Separator>-->
+        <DataGrid x:Name="desigDataGrid" Background="Green" AutoGenerateColumns="True" Margin="20,0,20,64" Height="247" VerticalAlignment="Bottom" d:LayoutOverrides="HorizontalAlignment" />
+        <Button x:Name="btnDesigRefresh" Content="Refresh" VerticalAlignment="Bottom" Margin="405,0,405,16" Click="BtnDesigRefresh_Click"/>
+
+        <!--<DataGrid x:Name="desigDataGrid" Background="Green" AutoGenerateColumns="True" Margin="20,0,20,52" Height="265" VerticalAlignment="Bottom" />
+        <Button x:Name="btnDesigRefresh" Content="Refresh" VerticalAlignment="Bottom" Margin="416,0,415,12" Click="BtnDesigRefresh_Click" d:LayoutOverrides="Width"/>-->
+
+    </Grid>
+</UserControl>
